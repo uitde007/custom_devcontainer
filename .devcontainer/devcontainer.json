@@ -1,0 +1,47 @@
+{
+	"name": "R (rocker/r-ver base)",
+	"image": "ghcr.io/rocker-org/devcontainer/tidyverse:4",
+	"features": {
+		"./localFeatureA": {}
+		// "ghcr.io/devcontainers/features/node:1": {
+		// 	"version": "lts"
+		// },
+		// "ghcr.io/devcontainers/features/aws-cli:1": {},
+		// "ghcr.io/devcontainers/features/git:1": {},
+		// "ghcr.io/devcontainers/features/git-lfs:1": {},
+		// "ghcr.io/devcontainers/features/github-cli:1": {},
+		// "ghcr.io/devcontainers/features/sshd:1": {},
+		// "./localFeatureShortReadMapping": {
+		// 	"htslib": true,
+		// 	"samtools": true,
+		// 	"bcftools":true
+		// }
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [8787],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+		  "extensions": [
+			"phoihos.csv-to-md-table",
+			"mads-hartmann.bash-ide-vscode",
+			"EditorConfig.EditorConfig",
+			"foxundermoon.shell-format",
+			"timonwong.shellcheck",
+			"redhat.vscode-yaml",
+			"ionutvmi.path-autocomplete"
+		],
+		"settings": {
+			"terminal.integrated.defaultProfile.linux": "zsh"
+		}
+		}
+	  }
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

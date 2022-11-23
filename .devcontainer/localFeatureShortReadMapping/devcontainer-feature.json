@@ -1,0 +1,23 @@
+{
+    "name": "Short read mapping apps",
+    "id": "localFeatureShortReadMapping",
+    "version": "0.0.1",
+    "description": "Installs software needed for short read mapping",
+    "options": {
+        "htslib": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install HTSlib? default <true>"
+        },
+        "samtools": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install Samtools? default <true>"
+        },
+        "bcftools": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install BCFtools? default <true>"
+        }
+    }
+}
