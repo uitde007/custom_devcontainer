@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+echo "Activating feature 'localFeatureShortReadMapping'"
+
 ### install prereqs
 sudo apt-get update && \
 sudo apt-get install -y gcc make libbz2-dev zlib1g-dev libncurses5-dev libncursesw5-dev liblzma-dev
@@ -21,12 +23,6 @@ wget_install() {
         cd / && \
         rm -rf ${DST:?}/"$FOLDER"
 }
-
-
-# Build
-echo "Activating feature 'localFeatureShortReadMapping'"
-
-# Build args are exposed to this entire feature set following the pattern:  _BUILD_ARG_<FEATURE ID>_<OPTION NAME>
 
 ### htslib
 if [ ${HTSLIB} == true ]; then

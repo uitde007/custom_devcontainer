@@ -4,20 +4,10 @@
     "version": "0.0.1",
     "description": "Install tools with personal preference",
     "options": {
-        "htslib": {
+        "user_ju": {
             "type": "boolean",
             "default": true,
-            "description": "Install HTSlib? default <true>"
-        },
-        "samtools": {
-            "type": "boolean",
-            "default": true,
-            "description": "Install Samtools? default <true>"
-        },
-        "bcftools": {
-            "type": "boolean",
-            "default": true,
-            "description": "Install BCFtools? default <true>"
+            "description": "Install ju user profile? default <true>"
         }
     }
 }

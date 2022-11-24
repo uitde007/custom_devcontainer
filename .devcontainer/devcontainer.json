@@ -8,27 +8,26 @@
 		// "ghcr.io/devcontainers/features/node:1": {
 		// 	"version": "lts"
 		// },
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/sshd:1": {},
 		// "ghcr.io/devcontainers/features/aws-cli:1": {},
-		// "ghcr.io/devcontainers/features/git:1": {},
-		// "ghcr.io/devcontainers/features/git-lfs:1": {},
-		// "ghcr.io/devcontainers/features/github-cli:1": {},
-		// "ghcr.io/devcontainers/features/sshd:1": {},
+		
 		"./localFeatureProfile": {
-			"htslib": true
+			"user_ju": true
 		},
 		"./localFeatureShortReadMapping": {
 			"htslib": true,
 			"samtools": true,
 			"bcftools":true
 		}
-
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [8787],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash",
+	// "postCreateCommand": "R --version",
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -43,11 +42,15 @@
 			"ionutvmi.path-autocomplete"
 		],
 		"settings": {
-			"terminal.integrated.defaultProfile.linux": "zsh"
+			"terminal.integrated.defaultProfile.linux": "bash"
 		}
 		}
-	  }
+	  },
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	"remoteUser": "root",
+	"mounts": [
+		"source=${localEnv:HOME}${localEnv:USERPROFILE},target=/host-home,type=bind,consistency=cached",
+		"source=/mnt/data,target=/mnt/data,type=bind,consistency=cached"
+	]
 }

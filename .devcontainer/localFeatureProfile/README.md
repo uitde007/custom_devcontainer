@@ -1,1 +1,1 @@
-# Illumina short read mapping and variant calling software
+# Install user preferences
