@@ -1,8 +1,8 @@
 {
-    "name": "Short read mapping apps",
-    "id": "ShortReadMapping",
+    "name": "Setup custom user profile",
+    "id": "localFeatureProfile",
     "version": "0.0.1",
-    "description": "Installs software needed for short read mapping",
+    "description": "Install tools with personal preference",
     "options": {
         "htslib": {
             "type": "boolean",

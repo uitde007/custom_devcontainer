@@ -13,11 +13,15 @@
 		// "ghcr.io/devcontainers/features/git-lfs:1": {},
 		// "ghcr.io/devcontainers/features/github-cli:1": {},
 		// "ghcr.io/devcontainers/features/sshd:1": {},
+		"./localFeatureProfile": {
+			"htslib": true
+		},
 		"./localFeatureShortReadMapping": {
 			"htslib": true,
 			"samtools": true,
 			"bcftools":true
 		}
+
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
