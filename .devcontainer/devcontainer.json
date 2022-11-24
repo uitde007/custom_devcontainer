@@ -9,17 +9,17 @@
 		// 	"version": "lts"
 		// },
 		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/devcontainers/features/sshd:1": {},
+		// "ghcr.io/devcontainers/features/github-cli:1": {},
 		// "ghcr.io/devcontainers/features/aws-cli:1": {},
 		
 		"./localFeatureProfile": {
 			"user_ju": true
 		},
 		"./localFeatureShortReadMapping": {
-			"htslib": true,
-			"samtools": true,
-			"bcftools":true
+			"htslib": false,
+			"samtools": false,
+			"bcftools":false
 		}
 	},
 
