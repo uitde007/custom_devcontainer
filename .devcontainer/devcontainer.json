@@ -2,7 +2,9 @@
 	"name": "R (rocker/r-ver base)",
 	"image": "ghcr.io/rocker-org/devcontainer/tidyverse:4",
 	"features": {
-		"./localFeatureA": {}
+		"./localFeatureA": {
+				"greeting": "Hello"
+		},
 		// "ghcr.io/devcontainers/features/node:1": {
 		// 	"version": "lts"
 		// },
@@ -11,11 +13,11 @@
 		// "ghcr.io/devcontainers/features/git-lfs:1": {},
 		// "ghcr.io/devcontainers/features/github-cli:1": {},
 		// "ghcr.io/devcontainers/features/sshd:1": {},
-		// "./localFeatureShortReadMapping": {
-		// 	"htslib": true,
-		// 	"samtools": true,
-		// 	"bcftools":true
-		// }
+		"./localFeatureShortReadMapping": {
+			"htslib": true,
+			"samtools": true,
+			"bcftools":true
+		}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
