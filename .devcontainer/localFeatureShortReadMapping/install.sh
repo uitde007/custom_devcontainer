@@ -7,6 +7,11 @@ echo "Activating feature 'localFeatureShortReadMapping'"
 sudo apt-get update && \
 sudo apt-get install -y gcc make libbz2-dev zlib1g-dev libncurses5-dev libncursesw5-dev liblzma-dev
 
+### precompiled debian libraries
+sudo apt-get install -y \
+    bedtools \
+    gmap
+
 ## Functions
 wget_install() {
     URL=$1
@@ -41,3 +46,12 @@ if [ ${BCFTOOLS} == true ]; then
     echo "Building feature 'BCFtools'"
     wget_install https://github.com/samtools/bcftools/releases/download/1.16/ bcftools-1.16.tar.bz2 bcftools-1.16
 fi
+
+### gatk
+test(){wget https://github.com/broadinstitute/gatk/releases/download/4.3.0.0/gatk-4.3.0.0.zip}
+
+### jcvi
+test(){
+    sudo apt install python3-pip
+    pip install jcvi
+}
